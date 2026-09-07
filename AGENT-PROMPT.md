@@ -1,0 +1,1 @@
+﻿Implement SPEC.md exactly (Quote Calculator evidence artefact for Hyper §2). Deliver quote.py, test_quote.py (>=10 tests), keep README short, ensure `python3 -m unittest -v` passes, write RESULT.md. No web UI/DB/auth. Commit when green.
