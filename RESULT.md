@@ -6,6 +6,7 @@
 - **Machine:** VarelaOS (Windows)
 - **Repo:** https://github.com/Andy-Crosthwaite/cc-hyper-quote-comparator
 - **Path:** C:\Users\andy\cc-astra\cc-hyper-quote-comparator
+- **Commit:** 938eef241d36a626951f35b45808f84122f2a07b (plus RESULT cleanup if any)
 - **When:** 2026-09-07 (Australia/Sydney)
 
 ## Blockers for real Cursor Agent generation
@@ -23,38 +24,29 @@
 | AGENT-PROMPT.md | retained task prompt |
 
 ## Verification
-```
-py.exe : test_below_half (test_quote.Acceptance.test_below_half) ... ok
-At C:\Users\andy\AppData\Local\Temp\ps-script-256c2ba1-8d48-4ec3-8454-8ffdc5d12d60.ps1:82 char:13
-+ $testOut = (& py -3 -m unittest -v 2>&1 | Out-String).Trim()
-+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    + CategoryInfo          : NotSpecified: (test_below_half...ow_half) ... ok:String) [], RemoteException
-    + FullyQualifiedErrorId : NativeCommandError
- 
-test_cli (test_quote.Acceptance.test_cli) ... ok
-test_decimal (test_quote.Acceptance.test_decimal) ... ok
-test_exact_cents (test_quote.Acceptance.test_exact_cents) ... ok
-test_format_negative (test_quote.Acceptance.test_format_negative) ... ok
-test_format_whole (test_quote.Acceptance.test_format_whole) ... ok
-test_format_zero (test_quote.Acceptance.test_format_zero) ... ok
-test_half_cent (test_quote.Acceptance.test_half_cent) ... ok
-test_large (test_quote.Acceptance.test_large) ... ok
-test_negative_exact (test_quote.Acceptance.test_negative_exact) ... ok
-test_negative_half (test_quote.Acceptance.test_negative_half) ... ok
-test_result_type (test_quote.Acceptance.test_result_type) ... ok
+Ran: `py -3 -m unittest -v`
 
-----------------------------------------------------------------------
-Ran 12 tests in 0.049s
+- test_below_half ... ok
+- test_cli ... ok
+- test_decimal ... ok
+- test_exact_cents ... ok
+- test_format_negative ... ok
+- test_format_whole ... ok
+- test_format_zero ... ok
+- test_half_cent ... ok
+- test_large ... ok
+- test_negative_exact ... ok
+- test_negative_half ... ok
+- test_result_type ... ok
 
-OK
-```
+Ran 12 tests in ~0.05s — **OK**
 
-CLI smoke: `py -3 quote.py 12.345` prints `12.35`
+CLI smoke: `py -3 quote.py 12.345` → `12.35`
 
 ## Git
-Commit message: feat: quote calculator per SPEC (local implementer fallback)
-Branch: main -> origin/main
+- Message: feat: quote calculator per SPEC (local implementer fallback)
+- Branch: main → origin/main
 
 ## Evidence copy
-Also mirrored to WSL:
+Mirrored to WSL:
 `/home/echo/cc-review-20260903/stage17/evidence/stage17/comparator/cursor/`
